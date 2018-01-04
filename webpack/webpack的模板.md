@@ -1,3 +1,20 @@
+## * webpack
+   ### 1.什么是Webpack？
+   #### WebPack可以看做是模块打包机：它做的事情是，分析你的项目结构，找到JavaScript模块以及其它的一些浏览器不能直接运行的拓展语言（Scss，TypeScript等），并将其转换和打包为合适的格式供浏览器使用。
+
+   ### 2.为什要使用WebPack？
+   #### 现今的很多网页其实可以看做是功能丰富的应用，它们拥有着复杂的JavaScript代码和一大堆依赖包。为了简化开发的复杂度，前端社区涌现出了很多好的实践方法
+
+   ### 3.WebPack和Gulp相比有什么特性？
+   #### 其实Webpack和另外两个并没有太多的可比性，Gulp是一种能够优化前端的开发流程的工具，而WebPack是一种模块化的解决方案，不过Webpack的优点使得Webpack在很多场景下可以替代Gulp/Grunt类的工具。
+   #### Gulp的工作方式是：在一个配置文件中，指明对某些文件进行类似编译，组合，压缩等任务的具体步骤，工具之后可以自动替你完成这些任务。
+   #### Webpack的工作方式是：把你的项目当做一个整体，通过一个给定的主文件（如：index.js），Webpack将从这个文件开始找到你的项目的所有依赖文件，使用loaders处理它们，最后打包为一个（或多个）浏览器可识别的JavaScript文件。
+   #### 如果实在要把二者进行比较，Webpack的处理速度更快更直接，能打包更多不同类型的文件。
+
+作者：zhangwang
+链接：https://www.jianshu.com/p/42e11515c10f
+來源：简书
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 ```js
 const webpack = require("webpack") // webpack
 const UglifyjsWebpackPlugin = require("uglifyjs-webpack-plugin") // 压缩js模块
@@ -15,6 +32,7 @@ module.exports = {
         filename: "[name].js", // 多出口
         // filename: "bundle.js", // 单出口
     },
+    // 插件
     plugins: [
         // 热替换插件
         new webpack.HotModuleReplacementPlugin(),
