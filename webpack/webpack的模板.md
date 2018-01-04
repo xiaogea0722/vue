@@ -11,10 +11,6 @@
    #### Webpack的工作方式是：把你的项目当做一个整体，通过一个给定的主文件（如：index.js），Webpack将从这个文件开始找到你的项目的所有依赖文件，使用loaders处理它们，最后打包为一个（或多个）浏览器可识别的JavaScript文件。
    #### 如果实在要把二者进行比较，Webpack的处理速度更快更直接，能打包更多不同类型的文件。
 
-作者：zhangwang
-链接：https://www.jianshu.com/p/42e11515c10f
-來源：简书
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 ```js
 const webpack = require("webpack") // webpack
 const UglifyjsWebpackPlugin = require("uglifyjs-webpack-plugin") // 压缩js模块
