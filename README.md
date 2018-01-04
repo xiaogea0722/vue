@@ -1,1 +1,1 @@
-# This's a git of my es6 and vue 
+# This is lixiao's somesing!
